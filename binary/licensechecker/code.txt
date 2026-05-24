@@ -1,0 +1,96 @@
+b'0'
+   0:   48 8d 04 25 00 00 06 00         lea    rax, ds:0x60000
+   8:   48 01 f8                add    rax, rdi
+   b:   48 8b 18                mov    rbx, QWORD PTR [rax]
+   e:   48 31 f3                xor    rbx, rsi
+  11:   48 89 18                mov    QWORD PTR [rax], rbx
+  14:   c3                      ret
+b'1'
+   0:   48 8d 04 25 00 00 06 00         lea    rax, ds:0x60000
+   8:   48 01 f8                add    rax, rdi
+   b:   48 83 c0 19             add    rax, 0x19
+   f:   48 8b 18                mov    rbx, QWORD PTR [rax]
+  12:   48 31 f3                xor    rbx, rsi
+  15:   48 89 18                mov    QWORD PTR [rax], rbx
+  18:   c3                      ret
+b'2'
+   0:   48 8d 04 25 00 00 06 00         lea    rax, ds:0x60000
+   8:   48 01 f8                add    rax, rdi
+   b:   48 83 c0 32             add    rax, 0x32
+   f:   48 8b 18                mov    rbx, QWORD PTR [rax]
+  12:   48 31 f3                xor    rbx, rsi
+  15:   48 89 18                mov    QWORD PTR [rax], rbx
+  18:   c3                      ret
+b'3'
+   0:   48 8d 04 25 00 00 06 00         lea    rax, ds:0x60000
+   8:   48 01 f8                add    rax, rdi
+   b:   48 83 c0 4b             add    rax, 0x4b
+   f:   48 8b 18                mov    rbx, QWORD PTR [rax]
+  12:   48 31 f3                xor    rbx, rsi
+  15:   48 89 18                mov    QWORD PTR [rax], rbx
+  18:   c3                      ret
+b'4'
+   0:   48 8d 04 25 00 00 06 00         lea    rax, ds:0x60000
+   8:   48 01 f8                add    rax, rdi
+   b:   8a 18                   mov    bl, BYTE PTR [rax]
+   d:   40 30 f3                xor    bl, sil
+  10:   88 18                   mov    BYTE PTR [rax], bl
+  12:   c3                      ret
+b'5'
+   0:   48 8d 04 25 00 00 06 00         lea    rax, ds:0x60000
+   8:   48 01 f8                add    rax, rdi
+   b:   48 83 c0 19             add    rax, 0x19
+   f:   8a 18                   mov    bl, BYTE PTR [rax]
+  11:   40 30 f3                xor    bl, sil
+  14:   88 18                   mov    BYTE PTR [rax], bl
+  16:   c3                      ret
+b'6'
+   0:   48 8d 04 25 00 00 06 00         lea    rax, ds:0x60000
+   8:   48 01 f8                add    rax, rdi
+   b:   48 83 c0 32             add    rax, 0x32
+   f:   8a 18                   mov    bl, BYTE PTR [rax]
+  11:   40 30 f3                xor    bl, sil
+  14:   88 18                   mov    BYTE PTR [rax], bl
+  16:   c3                      ret
+b'7'
+   0:   48 8d 04 25 00 00 06 00         lea    rax, ds:0x60000
+   8:   48 01 f8                add    rax, rdi
+   b:   48 83 c0 4b             add    rax, 75
+   f:   8a 18                   mov    bl, BYTE PTR [rax]
+  11:   40 30 f3                xor    bl, sil
+  14:   88 18                   mov    BYTE PTR [rax], bl
+  16:   c3                      ret
+b'8'
+   0:   48 8d 04 25 00 00 06 00         lea    rax, ds:0x60000
+   8:   48 c7 c3 00 00 00 00    mov    rbx, 0x0
+   f:   48 83 fb 64             cmp    rbx, 0x64
+  13:   7d 11                   jge    0x26
+  15:   48 8b 0c 18             mov    rcx, QWORD PTR [rax+rbx*1]
+  19:   48 f7 d1                not    rcx
+  1c:   48 89 0c 18             mov    QWORD PTR [rax+rbx*1], rcx
+  20:   48 83 c3 08             add    rbx, 0x8
+  24:   eb e9                   jmp    0xf
+  26:   c3                      ret
+b'9'
+   0:   c3                      ret
+b'a'
+   0:   c3                      ret
+b'b'
+   0:   c3                      ret
+b'c'
+   0:   c3                      ret
+b'd'
+   0:   c3                      ret
+b'e'
+   0:   c3                      ret
+b'f'
+   0:   c3                      ret
+b'g'
+   0:   c3                      ret
+b'h'
+   0:   c3                      ret
+b'i'
+   0:   c3                      ret
+b'j'
+   0:   c3                      ret
+b'k'
